@@ -51,3 +51,29 @@ function returnCharacterByGender(characters, gender) {
     return charactersByGender;
 }
 
+
+function showCharacter(character) {
+    let div = document.createElement("div");
+    div.classList.add("character");
+    div.id = character.id;
+
+    div.innerHTML = `
+        <div>${character.name}</div>
+        <div>${character.identity}</div>
+        <div>${character.gender}</div>
+        <div>${character.location}</div>
+        <div>${character.species}</div>
+    `;
+
+    return div;
+}
+
+function showCharacters (characters) {
+    let allCharacters = document.getElementById("characters");
+    allCharacters.innerHTML = "";
+
+    for (let character of characters) {
+        let oneCharacter = showCharacter(character);
+        allCharacters.appendChild(oneCharacter);
+    }
+}
