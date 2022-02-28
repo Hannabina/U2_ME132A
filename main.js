@@ -99,3 +99,23 @@ function characterSubmit(event) {
     let form = document.getElementById("add-character-form");
     form.reset();
 }
+
+function addCharacterHandler() {
+    let form = document.getElementById("add-character-form");
+    form.addEventListener("submit", characterSubmit);
+}
+
+function removeCharacterClick(event) {
+    let button = event.target;
+    let id = button.parentElement.id;
+    removeCharacterById(database, id);
+    showCharacters(database);
+}
+
+function removeCharacterHandlers() {
+    let buttons = document.querySelectorAll(".character button");
+
+    for (let button of buttons) {
+        button.addEventListener("click", removeCharacterClick);
+    }
+}
