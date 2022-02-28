@@ -139,3 +139,13 @@ function showAllClick() {
     document.getElementById("filter-gender").value = "";
     showCharacters(database);
 }
+
+function filterCharacterHandlers() {
+    let speciesForm = document.getElementById("filter-by-species");
+    let genderForm = document.getElementById("filter-by-gender");
+    let showAll = document.getElementById("show-all");
+
+    speciesForm.addEventListener("submit", filterBySpeciesSubmit);
+    genderForm.addEventListener("submit", FilterByGenderSubmit);
+    showAll.addEventListener("click", showAllClick);
+}
