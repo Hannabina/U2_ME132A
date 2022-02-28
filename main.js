@@ -119,3 +119,23 @@ function removeCharacterHandlers() {
         button.addEventListener("click", removeCharacterClick);
     }
 }
+
+function filterBySpeciesSubmit(event) {
+    event.preventDefault();
+    let species = document.getElementById("filter-species").value;
+    let characters = returnCharacterBySpecies(database, species);
+    showCharacters(characters);
+}
+
+function FilterByGenderSubmit(event) {
+    event.preventDefault();
+    let gender = document.getElementById("filter-gender").value;
+    let characters = returnCharacterByGender(database, gender);
+    showCharacters(characters);
+}
+
+function showAllClick() {
+    document.getElementById("filter-species").value = "";
+    document.getElementById("filter-gender").value = "";
+    showCharacters(database);
+}
