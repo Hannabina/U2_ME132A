@@ -82,6 +82,6 @@ let database = [
         species: "Symbiote"
     }
 
-]
+];
 
 

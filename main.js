@@ -6,7 +6,7 @@ function createNewCharacter(name, identity, gender, location, species) {
         identity: identity,
         gender: gender,
         location: location,
-        species: species
+        species: species,
     };
 
     return character;
@@ -51,7 +51,6 @@ function returnCharacterByGender(characters, gender) {
     return charactersByGender;
 }
 
-
 function showCharacter(character) {
     let div = document.createElement("div");
     div.classList.add("character");
@@ -63,17 +62,40 @@ function showCharacter(character) {
         <div>${character.gender}</div>
         <div>${character.location}</div>
         <div>${character.species}</div>
-    `;
+        <button type="button">Remove</button>`;
 
     return div;
 }
 
-function showCharacters (characters) {
-    let allCharacters = document.getElementById("characters");
-    allCharacters.innerHTML = "";
+function showCharacters(characters) {
+    let charactersElement = document.getElementById("characters");
+    charactersElement.innerHTML = "";
 
     for (let character of characters) {
-        let oneCharacter = showCharacter(character);
-        allCharacters.appendChild(oneCharacter);
+        let characterElement = showCharacter(character);
+        charactersElement.appendChild(characterElement);
     }
+
+}
+
+function characterSubmit(event) {
+    event.preventDefault();
+
+    let name = document.getElementById("name").value;
+    let identity = document.getElementById("identity").value;
+    let gender = document.getElementById("gender").value;
+    let location = document.getElementById("location").value;
+    let species = document.getElementById("species").value;
+
+    
+
+    let character = createNewCharacter(name, identity, gender, location, species);
+
+    character.id = database[database.length - 1].id + 1;
+
+    addCharacterToDatabase(database, character)
+    showCharacters(database);
+
+    let form = document.getElementById("add-character-form");
+    form.reset();
 }
