@@ -75,7 +75,7 @@ function showCharacters(characters) {
         let characterElement = showCharacter(character);
         charactersElement.appendChild(characterElement);
     }
-
+    removeCharacterHandlers();
 }
 
 function characterSubmit(event) {
@@ -149,3 +149,7 @@ function filterCharacterHandlers() {
     genderForm.addEventListener("submit", FilterByGenderSubmit);
     showAll.addEventListener("click", showAllClick);
 }
+
+showCharacters(database);
+addCharacterHandler();
+filterCharacterHandlers();
