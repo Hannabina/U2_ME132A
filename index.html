@@ -7,12 +7,15 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Smooch+Sans:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="marvel-text">
+        <h1 class="star">★</h1>
         <h1>MARVEL CHARACTERS</h1>    
+        <h1 class="star">★</h1>
+
     </div>
 
     <div id="form">
@@ -23,22 +26,24 @@
             <input id="loation" type="text" placeholder="Location">
             <input id="species" type="text" placeholder="Species">
     
-            <button>Add</button>
+            <button id="add">Add</button>
         </form>
     </div>
-
-    <div id="filters">
-        <form id="filter-by-species">
-            <input id="filter-species" type="text" placeholder="Filter by species">
-            <button>Filter</button>
-        </form>
-
-        <form id="filter-by-gender">
-            <input id="filter-gender" type="text" placeholder="Filter by gender">
-            <button>Filter</button>
-        </form>
-
-        <button id="show-all" type="button">Show all</button>
+    
+    <div id="filter-box">
+        <div id="filters">
+            <form id="filter-by-species">
+                <input id="filter-species" type="text" placeholder="Filter by species">
+                <button>Filter</button>
+            </form>
+    
+            <form id="filter-by-gender">
+                <input id="filter-gender" type="text" placeholder="Filter by gender">
+                <button>Filter</button>
+            </form>
+    
+            <button id="show-all" type="button">Show all</button>
+        </div>
     </div>
 
     <div id="headers">
