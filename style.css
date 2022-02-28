@@ -7,6 +7,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-bottom: 2px solid rgb(84, 84, 179);
 }
 
 h1{
@@ -17,6 +18,8 @@ h1{
     font-size: 60px;
     margin-left: 10px;
     margin-right: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 .star{
     background-color: rgb(78, 120, 199);
@@ -31,16 +34,20 @@ h1{
 }
 
 #add-character-form {
+    margin-top: 10px;
+    padding: 10px;
     display: grid;
     grid-template-columns: 200px 150px 100px 200px 150px 100px;
     gap: 10px;
+    background-color: rgb(84, 84, 179);
+    border: 2px solid beige;
 }
 button{
     font-family: "Anton";
 }
 
 #add{
-    background-color: ;
+    
 }
 
 #filter-box{
@@ -74,6 +81,3 @@ button{
     color: orange;
   }
   
-  #show-all{
-
-  }
