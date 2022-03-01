@@ -13,17 +13,27 @@ function createNewCharacter(name, identity, gender, location, species) {
 }
 
 function addCharacterToDatabase(database, character) {
-    database.push(character);
+    let wantsToAddCharacter = confirm(`Are you sure you want to add: ${character.name} to the database?`);
+
+    if (wantsToAddCharacter) {
+        database.push(character);
+    }
 }
 
 function removeCharacterById(characters, id) {
+
     for (let i = 0; i < characters.length; i++) {
         let character = characters[i];
 
+    
         if (character.id == id) {
-            characters.splice(i, 1);
-            return;
-        }
+            let confirmCharacter = confirm(`Are you sure you want to remove: ${character.name} from the list?`);
+
+            if (confirmCharacter) {
+                characters.splice(i, 1);
+                return;
+            }
+        } 
     }
 }
 
@@ -108,8 +118,10 @@ function addCharacterHandler() {
 function removeCharacterClick(event) {
     let button = event.target;
     let id = button.parentElement.id;
+
     removeCharacterById(database, id);
     showCharacters(database);
+
 }
 
 function removeCharacterHandlers() {
