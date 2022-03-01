@@ -1,13 +1,15 @@
 body {
     height: 100vh;
     margin: 0px;
-    background-color: rgb(78, 120, 199);
+    background-color: rgb(54, 119, 172);;
 }
 #marvel-text{
     display: flex;
     justify-content: center;
     align-items: center;
     border-bottom: 2px solid rgb(84, 84, 179);
+    background-position: center;
+    background-size: contain;
 }
 
 h1{
@@ -15,14 +17,14 @@ h1{
     font-family: "Anton";
     background-color: red;
     color: white;
-    font-size: 60px;
+    font-size: 5vw;
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 20px;
     margin-bottom: 20px;
 }
 .star{
-    background-color: rgb(78, 120, 199);
+    background-color: transparent;
 }
 
 #form{
@@ -72,14 +74,64 @@ button{
 #headers {
     padding: 10px 20px;
     border-bottom: 1px solid #aaa;
-    background: beige;
+    background: rgb(84, 84, 179);
+    border-top: solid 2px beige;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     font-family: "Smooch Sans";
-    text-align: center;
-    font-size: 20px;
-    color: orange;
+    font-size: 2vw;
+    color: white;
+    gap: 15px;
   }
   
-  #characters {
-  }
+.character {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr) ;
+    height: 10vh;
+    font-family: "Oswald";
+    font-size: 1.5vw;
+    gap: 15px;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+#characters > .character:nth-child(2n){
+    background-color: red;
+    color: white;
+}
+
+#box {
+    background-color: white;
+    color: red;
+}
+
+#pics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: 100px;
+}
+
+#pic-a {
+    background-image: url(cap.A.jpg);
+}
+
+#pic-b{
+    background-image: url(guardiansof.png);
+}
+
+#pic-c {
+    background-image: url(spiderman.jpg);
+}
+
+#pic-d{
+    background-image: url(scarlet.witch.jpg);
+}
+
+.pic {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100px;
+}

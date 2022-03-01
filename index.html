@@ -7,17 +7,21 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Smooch+Sans:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@300&family=Smooch+Sans:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="marvel-text">
         <h1 class="star">★</h1>
         <h1>MARVEL CHARACTERS</h1>    
         <h1 class="star">★</h1>
-
     </div>
-
+    <div id="pics">
+        <div class="pic" id="pic-a"></div>
+        <div class="pic" id="pic-b"></div>
+        <div class="pic" id="pic-c"></div>
+        <div class="pic" id="pic-d"></div>
+    </div>
     <div id="form">
         <form id="add-character-form">
             <input id="name" type="text" placeholder="Name of character">
@@ -45,17 +49,20 @@
             <button id="show-all" type="button">Show all</button>
         </div>
     </div>
-
-    <div id="headers">
-        <div>Character</div>
-        <div>Full name</div>
-        <div>Gender</div>
-        <div>Location</div>
-        <div>Species</div>
-
+    <div id="box">
+        <div id="headers">
+            <div>Character</div>
+            <div>Full name</div>
+            <div>Gender</div>
+            <div>Location</div>
+            <div>Species</div>
+            <div></div>
+    
+        </div>
+    
+        <div id="characters"></div>
     </div>
 
-    <div id="characters"></div>
     <script src="index.js"></script>
     <script src="main.js"></script>
 
