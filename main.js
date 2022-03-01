@@ -13,11 +13,7 @@ function createNewCharacter(name, identity, gender, location, species) {
 }
 
 function addCharacterToDatabase(database, character) {
-    let wantsToAddCharacter = confirm(`Are you sure you want to add: ${character.name} to the database?`);
-
-    if (wantsToAddCharacter) {
-        database.push(character);
-    }
+    database.push(character);
 }
 
 function removeCharacterById(characters, id) {
@@ -67,7 +63,7 @@ function showCharacter(character) {
     div.id = character.id;
 
     div.innerHTML = `
-        <div>${character.name}</div>
+        <li>${character.name}</li>
         <div>${character.identity}</div>
         <div>${character.gender}</div>
         <div>${character.location}</div>
@@ -92,15 +88,32 @@ function characterSubmit(event) {
     event.preventDefault();
 
     let name = document.getElementById("name").value;
+    if (name == "") {
+        alert("Name of character must be filled out");
+        return false;
+    }
     let identity = document.getElementById("identity").value;
+    if (identity == "") {
+        alert("Full name must be filled out")
+        return false;
+    }
     let gender = document.getElementById("gender").value;
+    if (gender == "") {
+        alert("Gender must be filled out")
+        return false;
+    }
     let location = document.getElementById("location").value;
+    if (location == "") {
+        alert("Location must be filled out")
+        return false;
+    }
     let species = document.getElementById("species").value;
-
-    
+    if (species == "") {
+        alert("Species must be filled out")
+        return false;
+    }
 
     let character = createNewCharacter(name, identity, gender, location, species);
-
     character.id = database[database.length - 1].id + 1;
 
     addCharacterToDatabase(database, character)
@@ -108,6 +121,8 @@ function characterSubmit(event) {
 
     let form = document.getElementById("add-character-form");
     form.reset();
+
+
 }
 
 function addCharacterHandler() {
