@@ -17,11 +17,10 @@ h1{
     font-family: "Anton";
     background-color: red;
     color: white;
+    padding-left: 10px;
+    padding-right: 10px;
     font-size: 5vw;
-    margin-left: 15px;
-    margin-right: 15px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 20px;
 }
 .star{
     background-color: transparent;
