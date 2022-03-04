@@ -1,5 +1,7 @@
 "use strict";
 
+// Länk till github: https://github.com/Hannabina/U2_ME132A
+
 //Skapar en ny karaktär och retunerar den
 function createNewCharacter(name, identity, gender, location, species, birthYear) {
     let character = {
@@ -139,7 +141,11 @@ function characterSubmit(event) {
     let character = createNewCharacter(name, identity, gender, location, species, birthYear);
 
     // Räknar ut den nya karaktärens id
-    character.id = database[database.length - 1].id + 1;
+    if (database.length = database.length){
+        character.id = database[database.length - 1].id + 1;
+    } else {
+        character.id = 1;
+    }
 
     addCharacterToDatabase(database, character)
     showCharacters(database);
